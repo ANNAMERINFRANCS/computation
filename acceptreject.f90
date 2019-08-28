@@ -1,0 +1,23 @@
+program acceptreject
+    implicit none
+    real::r,x,y,accept_int,exact
+    integer::i,n,point
+   write(*,*)"value of n"
+   read(*,*)n
+open(unit=21, file='acceptreject.dat')
+5 point=0
+do i=1,n
+    call random_number(r)
+    x=3.0d0*r
+    call random_number(r)
+    y=exp(3.0d0)*r
+    if(y .lt. exp(x))then
+        point=point+1
+    end if
+end do
+accept_int=3.0d0*exp(3.0d0)*(real(point)/real(n))
+exact=exp(3.0d0)-1
+write(21,*)n,"",accept_int,"",abs(accept_int-exact)
+n=n*10
+if (n .le. 100000000) goto 5
+end program acceptreject

@@ -1,7 +1,7 @@
 program randomtest
     implicit none
     real::r
-    integer::i
+    integer::i,n=6
 
     do i=1,6
         call random_number(r)

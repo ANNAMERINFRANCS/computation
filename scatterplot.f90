@@ -23,7 +23,7 @@ write(*,*)"The standard deviation is",sigma
 allocate(q(n))
 q=0.0d0
 call random_number(q)
-do j=1,3000
+do j=1,50
     sum1=0.0d0
     k=j-1
     do i=1,n-k

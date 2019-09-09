@@ -23,6 +23,7 @@ write(*,*)"The mean is",avg
 write(*,*)"The standard deviation is",sigma
 write(28,*)1.0d0/sqrt(real(n)), abs(avg-0.5d0)
 end do
+
 end program scatter
 
 

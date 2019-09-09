@@ -33,7 +33,7 @@ program MultiBrute
       
       n=n*10
 
-      if (n .lt. 1e9) goto 1
+      if (n .lt. 1e10) goto 1
 
 
 

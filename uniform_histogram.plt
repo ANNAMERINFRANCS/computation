@@ -1,8 +1,8 @@
 reset
-n=50 #number of intervals
+n=20 
 max=1. #max value
-min=0. #min value
-width=(max-min)/n #interval width
+min=0.
+width=(max-min)/n
 #function used to map a value to the intervals
 set term png
 set output "uniform.png"
